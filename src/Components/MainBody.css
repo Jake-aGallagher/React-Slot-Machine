@@ -71,7 +71,7 @@
 
 #tokens {
     background-color: #c6f3ab;
-    margin: 0px;
+    margin: 15px 0 0 0;
     width: 25vw;
     font-size: 30px;
     font-weight: 800;
@@ -114,4 +114,20 @@
 
 .bottomBtns:disabled{
     opacity: 0.7;
+}
+
+@media screen and (max-width: 500px){
+    .spinner{
+        font-size: 40px;
+    }
+    .nudge{
+        font-size: 13px;
+    }
+    #tokens{
+        font-size: 20px;
+    }
+    .bottomBtns{
+        width: 20vw;
+        font-size: 13px;
+    }
 }
