@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/React-Slot-Machine/static/css/main.5649be31.css",
+    "main.css": "/React-Slot-Machine/static/css/main.162cfee0.css",
     "main.js": "/React-Slot-Machine/static/js/main.a6d18e2f.js",
     "index.html": "/React-Slot-Machine/index.html",
-    "main.5649be31.css.map": "/React-Slot-Machine/static/css/main.5649be31.css.map",
+    "main.162cfee0.css.map": "/React-Slot-Machine/static/css/main.162cfee0.css.map",
     "main.a6d18e2f.js.map": "/React-Slot-Machine/static/js/main.a6d18e2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.5649be31.css",
+    "static/css/main.162cfee0.css",
     "static/js/main.a6d18e2f.js"
   ]
 }
