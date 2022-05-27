@@ -1,6 +1,8 @@
 import React, { useReducer } from "react";
 import './MainBody.css';
 
+
+/* Setting the initial state for the Reducer */
 const initialState = {
   red: 0,
   blue: 0,
@@ -12,6 +14,8 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
+
+    /* Play Again button activates this case */
     case "random":
       return {
         red: Math.floor(Math.random() * 4 + 1),
@@ -21,6 +25,8 @@ const reducer = (state, action) => {
         tokens: state.tokens - 1,
         winningsClicked: false,
       };
+
+    /* The first "Nudge" button activates this case */
     case "1":
       return {
         red: Math.floor(Math.random() * 4 + 1),
@@ -30,6 +36,8 @@ const reducer = (state, action) => {
         tokens: state.tokens,
         winningsClicked: state.winningsClicked,
       };
+
+    /* The second "Nudge" button activates this case */
     case "2":
       return {
         red: state.red,
@@ -39,6 +47,8 @@ const reducer = (state, action) => {
         tokens: state.tokens,
         winningsClicked: state.winningsClicked,
       };
+
+    /* The third "Nudge" button activates this case */
     case "3":
       return {
         red: state.red,
@@ -48,6 +58,8 @@ const reducer = (state, action) => {
         tokens: state.tokens,
         winningsClicked: state.winningsClicked,
       };
+
+    /* The "Collect Winnings" button activates this case */
     case "winner":
       return {
         red: state.red,
@@ -57,6 +69,8 @@ const reducer = (state, action) => {
         tokens: state.tokens + 5,
         winningsClicked: true,
       };
+
+    /* Default case to help prevent any errors */
     default:
       return {
         red: state.red,
@@ -79,6 +93,7 @@ const playButton = (state) => {
   }
 };
 
+/* Controls the disabling of "Nudge" buttons */
 const showButtons = (state) => {
   if (playButton(state) === "Play") {
     return true;
@@ -90,11 +105,15 @@ const showButtons = (state) => {
   }
 };
 
+
+/* Controls the disabling of "Collect Winnings" button */
 const showWinnings = (state) => {
   if (
+    /* Check if three spinners are of equal value and have been spun */
     state.red === state.blue &&
     state.red === state.green &&
     state.red > 0 &&
+    /* Check the winnings haven't already been collected for this spin */
     state.winningsClicked === false
   ) {
     return false;
@@ -121,34 +140,40 @@ const MainBody = () => {
         >
           Nudge
         </button>
+
         <button className="nudge"
           disabled={showButtons(state)}
           onClick={() => dispatch({ type: "2" })}
         >
           Nudge
         </button>
+
         <button className="nudge"
           disabled={showButtons(state)}
           onClick={() => dispatch({ type: "3" })}
         >
           Nudge
         </button>
+        
       </div>
       <div id="controls">
         <p id="tokens">Tokens: {state.tokens}</p>
         <div id="controlBtns">
+
         <button className="bottomBtns"
           disabled={showWinnings(state)}
           onClick={() => dispatch({ type: "winner" })}
         >
           Collect Winnings
         </button>
+
         <button className="bottomBtns"
           disabled={playButton(state) === "Out Of Tokens"}
           onClick={() => dispatch({ type: "random" })}
         >
           {playButton(state)}
         </button>
+
         </div>
       </div>
     </>
