@@ -1,5 +1,5 @@
 #display {
-    background-color: #e900ff;
+    background-color: #701ac0;
     width: 75vw;
     height: 20vh;
     display: flex;
@@ -12,12 +12,12 @@
 }
 
 .spinner{
-    background-color: #ffc600;
-    color: #ff008e;
+    background-color: #c6f3ab;
+    color: #e900ff;
     margin: 15px;
     border-radius: 5px;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,13 +26,14 @@
 }
 
 #nudgeBtns {
-    background-color: #e900ff;
+    background-color: #701ac0;
     width: 75vw;
     height: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0px 10px 50px 10px;
+    margin: 0px 10px 40px 10px;
+    padding-bottom: 10px;
 }
 
 .nudge {
@@ -40,7 +41,7 @@
     margin: 5px;
     width: 15vw;
     border-radius: 8px;
-    background-color: #ffc600;
+    background-color: #46e91e;
     color: #e900ff;
     font-size: 15px;
     font-weight: 800;
@@ -48,20 +49,20 @@
 }
 
 .nudge:hover{
-    background-color: #be980f;
+    background-color: #47e91ebb;
 }
 
 .nudge:active{
-    background-color: #ffc600;
+    background-color: #46e91e;
     box-shadow: 0 2px #666;
     transform: translateY(1px);
 }
 
 #controls {
-    background-color: #e900ff;
+    background-color: #701ac0;
     width: 75vw;
     height: 20vh;
-    padding: 0px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -69,7 +70,7 @@
 }
 
 #tokens {
-    background-color: #ffc600;
+    background-color: #c6f3ab;
     margin: 0px;
     width: 25vw;
     font-size: 30px;
@@ -94,7 +95,7 @@
     width: 15vw;
     height: 5vh;
     border-radius: 8px;
-    background-color: #ffc600;
+    background-color: #46e91e;
     color: #e900ff;
     font-size: 15px;
     font-weight: 800;
@@ -102,11 +103,11 @@
 }
 
 .bottomBtns:hover{
-    background-color: #be980f;
+    background-color: #47e91ebb;
 }
 
 .bottomBtns:active{
-    background-color: #ffc600;
+    background-color: #46e91e;
     box-shadow: 0 2px #666;
     transform: translateY(1px);
 }
